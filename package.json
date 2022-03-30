@@ -1,6 +1,6 @@
 {
 	"name": "hex-blender",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"description": "a library for finding out the hex value between two values",
 	"main": "dist/index.cjs",
 	"module": "dist/index.es.js",
@@ -9,8 +9,9 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"build": "rollup -c",
-		"start": "ts-node start.ts",
-		"clean": "rm -r ./dist"
+		"build:major": "npm --no-git-tag-version version major && rollup -c",
+		"build:minor": "npm --no-git-tag-version version minor && rollup -c",
+		"build:patch": "npm --no-git-tag-version version patch && rollup -c"
 	},
 	"keywords": [
 		"hex",
@@ -18,6 +19,9 @@
 		"colour",
 		"color",
 		"util"
+	],
+	"files": [
+		"dist"
 	],
 	"author": "KnowsCount <knowscount@gmail.com>",
 	"license": "WTFPL",
