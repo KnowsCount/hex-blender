@@ -1,36 +1,36 @@
 const hexBlend = (
-	color1: string,
-	color2: string,
+	colour1: string,
+	colour2: string,
 	res: number,
 	blend: number
 ) => {
 	const wrongChar: RegExp = /[^0-9a-f]/i
 
 	if (
-		color1.length !== 6 ||
-		color2.length !== 6 ||
-		wrongChar.test(color1) ||
-		wrongChar.test(color2)
+		colour1.length !== 6 ||
+		colour2.length !== 6 ||
+		wrongChar.test(colour1) ||
+		wrongChar.test(colour2)
 	)
 		return -1
 
-	const getColorFromRange = (range: number[], res: number, arg: number) =>
+	const getcolourFromRange = (range: number[], res: number, arg: number) =>
 		((range[1] - range[0]) / res) * arg + range[0]
 
-	const [RGB1, RGB2]: any = [color1.match(/.{2}/g), color2.match(/.{2}/g)]
+	const [RGB1, RGB2]: any = [colour1.match(/.{2}/g), colour2.match(/.{2}/g)]
 
 	return [
-		~~getColorFromRange(
+		~~getcolourFromRange(
 			[parseInt(RGB1[0], 16), parseInt(RGB2[0], 16)],
 			res,
 			blend
 		),
-		~~getColorFromRange(
+		~~getcolourFromRange(
 			[parseInt(RGB1[1], 16), parseInt(RGB2[1], 16)],
 			res,
 			blend
 		),
-		~~getColorFromRange(
+		~~getcolourFromRange(
 			[parseInt(RGB1[2], 16), parseInt(RGB2[2], 16)],
 			res,
 			blend
