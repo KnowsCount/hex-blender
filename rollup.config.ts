@@ -23,14 +23,14 @@ export default [
 		input: inputFileName,
 		output: [
 			{
-				name: 'hexBlender',
+				name: 'hexBlend',
 				file: pkg.browser,
 				format: 'iife',
 				sourcemap: 'inline',
 				banner,
 			},
 			{
-				name: 'hexBlender',
+				name: 'hexBlend',
 				file: pkg.browser.replace('.js', '.min.js'),
 				format: 'iife',
 				sourcemap: 'inline',
