@@ -21,6 +21,6 @@ import hexBlend from 'hex-blender'
 const getMiddleColour = (colourOne, colourTwo) => {
 	return hexBlend(colourOne, colourTwo, 4, 2)
 }
-// remember, please do not add `#` in front of the hex values for now
-getMiddleColour('ff0000', '00ff00') // '7f7f00'
+// adding `#` or not is optional
+getMiddleColour('ff0000', '#00ff00') // '#7f7f00'
 ```
