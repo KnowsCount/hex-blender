@@ -25,7 +25,7 @@ export default [
 		output: [
 			{
 				name: 'hexBlend',
-				file: pkg.browser.replace('.js', '.min.js'),
+				file: pkg.browser,
 				format: 'iife',
 				// sourcemap: 'inline',
 				banner,
