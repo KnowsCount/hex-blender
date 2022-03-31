@@ -14,26 +14,20 @@ const banner = `
    * @license
    * author: ${author}
    * ${moduleName}.js v${pkg.version}
-   * Released under the ${pkg.license} license.
+   * released under the ${pkg.license} license.
    */
 `
 
 export default [
+	// browser
 	{
 		input: inputFileName,
 		output: [
 			{
 				name: 'hexBlend',
-				file: pkg.browser,
-				format: 'iife',
-				sourcemap: 'inline',
-				banner,
-			},
-			{
-				name: 'hexBlend',
 				file: pkg.browser.replace('.js', '.min.js'),
 				format: 'iife',
-				sourcemap: 'inline',
+				// sourcemap: 'inline',
 				banner,
 				plugins: [terser()],
 			},
@@ -53,7 +47,7 @@ export default [
 		],
 	},
 
-	// ES
+	// es
 	{
 		input: inputFileName,
 		output: [
@@ -84,7 +78,7 @@ export default [
 		],
 	},
 
-	// CommonJS
+	// commojs
 	{
 		input: inputFileName,
 		output: [

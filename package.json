@@ -1,17 +1,17 @@
 {
 	"name": "hex-blender",
-	"version": "0.0.2",
-	"description": "a library for finding out the hex value between two values",
+	"version": "1.0.0",
+	"description": "a library for finding out the hex value between two hex values.",
 	"main": "dist/index.cjs",
 	"module": "dist/index.es.js",
 	"browser": "dist/index.js",
 	"type": "module",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "rollup -c",
-		"build:major": "npm --no-git-tag-version version major && rollup -c",
-		"build:minor": "npm --no-git-tag-version version minor && rollup -c",
-		"build:patch": "npm --no-git-tag-version version patch && rollup -c"
+		"build": "rimraf dist && rollup -c",
+		"build:major": "rimraf dist && npm --no-git-tag-version version major && rollup -c",
+		"build:minor": "rimraf dist && npm --no-git-tag-version version minor && rollup -c",
+		"build:patch": "rimraf dist && npm --no-git-tag-version version patch && rollup -c"
 	},
 	"keywords": [
 		"hex",
@@ -34,6 +34,7 @@
 		"@rollup/plugin-node-resolve": "^13.1.3",
 		"@rollup/plugin-typescript": "^8.3.1",
 		"jest": "^27.5.1",
+		"rimraf": "^3.0.2",
 		"rollup": "^2.70.1",
 		"rollup-plugin-terser": "^7.0.2",
 		"ts-jest": "^27.1.4",
