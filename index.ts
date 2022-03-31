@@ -12,7 +12,7 @@ const hexBlend = (
 		wrongChar.test(colour1) ||
 		wrongChar.test(colour2)
 	)
-		return -1
+		return 'input format is wrong. please use 6 hexadecimal characters without `#` in front.'
 
 	const getcolourFromRange = (range: number[], res: number, arg: number) =>
 		((range[1] - range[0]) / res) * arg + range[0]
