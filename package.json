@@ -1,6 +1,6 @@
 {
 	"name": "hex-blender",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "a library for finding out the hex value between two hex values.",
 	"main": "dist/index.cjs",
 	"module": "dist/index.es.js",
