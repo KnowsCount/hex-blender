@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>hex-blender demo</title>
+	</head>
+        <input id="colour-one" type="text"></input>
+        <input id="colour-two" type="text"></input>
+        <input id="range" type="number"></input>
+        <input id="blend" type="number"></input>
+        <button id="button" type="submit">submit</button>
+        <br>
+        <p id="result">result will be displayed here.</p>
+
+		<script src="https://unpkg.com/hex-blender@1.0.1/dist/index.min.js">
+        </script>
+        <script>
+            const input1 = document.getElementById('colour-one')
+            const input2 = document.getElementById('colour-two')
+            const range = document.getElementById('range')
+            const blend = document.getElementById('blend')
+            const result = document.getElementById('result')
+            const button = document.getElementById('button')
+
+            button.addEventListener('click', () => {
+                result.innerText = hexBlend(input1.value, input2.value, range.value, blend.value)
+            })
+        </script>
+	</body>
+</html>
